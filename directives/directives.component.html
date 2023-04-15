@@ -1,0 +1,36 @@
+
+<div *ngFor="let n of names">
+    <li>{{n}}</li>
+</div>
+
+<table *ngFor="let n of names">
+    <tr>
+        <td>{{n}}</td>
+    </tr>
+
+</table>
+
+
+<p *ngIf="status; then Block1 else Block2"></p>
+
+<ng-template #Block1>
+    <h2>Hi Angular</h2> 
+</ng-template>
+
+<ng-template #Block2>
+    <h2>Bye Angular</h2>
+</ng-template>
+
+
+
+<div [ngSwitch]="day">
+    <h2 *ngSwitchCase="1">Sunday</h2>
+    <h2 *ngSwitchCase="2">Monday</h2>
+    <h2 *ngSwitchCase="3">Tuesday</h2>
+    <h2 *ngSwitchCase="4">Wednesday</h2>
+    <h2 *ngSwitchDefault>Wrong Choice!!</h2>
+</div>
+
+
+<h2 [ngClass]="['primary','big']">This is a heading </h2>
+<h2 [ngClass]="['secondary','small']">This is a heading </h2>

@@ -1,0 +1,36 @@
+i) Model 
+Model is typescript class that represents an Entity.
+e.g - Employee, Student, Customer etc
+
+create Model folder -> create Model class using .ts extension. 
+
+ii)Service
+Service is a class that can be reused in different components across the application.
+
+e.g- EmployeeService, OrderService
+
+command : ng g s employee
+
+
+iii)HTTP Client Module
+This module helps us to make rest api call to endpoints.
+like - GET, POST, PATCH, PUT, DELETE
+
+app.module.ts -
+
+Publisher - Subscriber
+Observable(emit/return data stream) 
+Observer subscribe to Observable to get the data
+
+
+
+
+
+
+
+
+
+iv)Routing
+Ruting is usd to create nativagation that redirects the user to different part of the application.
+
+Service(Array od users)  <-----    component.ts ---->  Template

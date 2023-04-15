@@ -1,0 +1,16 @@
+
+<h2>Login Form</h2>
+<form #myform="ngForm" (ngSubmit)="captureFormData(myform)">
+  UserName:<input type="text"  name="uname" ngModel required><br>
+  
+  <span class="text-danger" *ngIf="myform.controls['uname']?.invalid && myform.controls['uname'].dirty">
+    <p>Enter Username</p>
+  </span>
+
+  Password:<input type="password" name="password" ngModel required><br>
+
+  <span class="text-danger" *ngIf="myform.controls['password']?.invalid && myform.controls['password'].dirty">
+    <p>Enter Password</p>
+  </span>
+  <input type="submit" value="Login">
+</form>

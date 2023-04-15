@@ -1,0 +1,60 @@
+Angular Forms:
+
+i)Initialize the forms fields and present it to the user.
+ii)Capture the data from the user.
+iii)Track changes made to the fields.
+iv)Validate the inputs.
+v)Display helpful errors to the users.
+
+a)Template Driven            - for easy and simple forms
+b)Reactive / Model driven    - for complex forms
+
+Building blocks of Forms:
+i)FormControl - single form field
+ii)FormGroup  - group of formControl
+iii)FormArray - group of formControl
+
+
+let firstName=new FormControl();
+<input type="text" name="firstname">
+
+
+ 
+city : <input type="text" name="city" >
+Street : <input type="text" name="street" >
+PinCode : <input type="text" name="pincode" >
+
+let address= new FormGroup({
+    street : new FormControl(""),
+    city : new FormControl(""),
+    pinCode : new FormControl("")
+})
+
+
+ 
+contactForm = new FormGroup( {
+    name: new FormControl(''),
+    cities:new FormArray([
+      new FormControl('Mumbai'),
+      new FormControl('Delhi')
+    ])
+  });
+
+
+Template Driven Form:
+
+i)set up the form using ngForm directive.
+ii)Controls are set up using ngModel.
+iii)ngSumbit is used to submit the form.
+
+import - FormsModule
+import - reactiveFormsModule
+
+
+
+ 
+
+
+
+
+

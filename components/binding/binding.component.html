@@ -1,0 +1,15 @@
+<!--Two way data binding using property and event binding-->
+<input type="text" [value]="name"  (input)="name=$any($event.target).value">
+<p>You entered {{name}}</p>
+
+<button (click)="clear()">Clear</button>
+
+<br/><br/>
+
+<!--Two way data binding using ngModel-->
+
+<input type="text" name="value" [(ngModel)]="value">
+<p>{{value}}</p>
+<button (click)="clearValue()">Clear</button>
+
+

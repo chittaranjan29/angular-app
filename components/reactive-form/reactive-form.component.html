@@ -1,0 +1,23 @@
+<h2>Registration Form</h2>
+<form [formGroup]="simpleForm" (ngSubmit)="captureFormData()">
+
+    UserName:<input type="text"  formControlName="name"  required><br>
+  
+    <span class="text-danger" *ngIf="simpleForm.get('name')?.invalid && simpleForm.get('name')?.touched">
+      <p>Invalid Username</p>
+    </span>
+
+    Email:<input type="email"  formControlName="email"  required><br>
+    
+    <span class="text-danger" *ngIf="simpleForm.get('email')?.invalid && simpleForm.get('email')?.touched">
+        <p>Invalid Email</p>
+    </span>
+
+
+    Age:<input type="number"  formControlName="age"  required><br>
+    <span class="text-danger" *ngIf="simpleForm.get('age')?.invalid && simpleForm.get('age')?.touched">
+        <p>Invalid Age</p>
+    </span>
+
+    <input type="submit" value="Register">
+</form>
